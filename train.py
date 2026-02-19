@@ -26,7 +26,6 @@ class ImageFolderDataset(Dataset):
             raise ValueError(f"No images found in {root_dir}")
         self.transform = transforms.Compose(
             [
-                transforms.CenterCrop(image_size),
                 transforms.ToTensor(),
                 transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5]),
             ]
